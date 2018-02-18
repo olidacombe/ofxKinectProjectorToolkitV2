@@ -23,6 +23,7 @@ public:
     void setup();
     void update();
     void draw();
+    void drawProjector(ofEventArgs &args);
     
     void keyPressed(int key);
     void keyReleased(int key);

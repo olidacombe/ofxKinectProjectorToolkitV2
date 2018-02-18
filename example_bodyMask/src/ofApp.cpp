@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetWindowShape(1280, 800);
+    ofSetWindowShape(PROJECTOR_RESOLUTION_X, PROJECTOR_RESOLUTION_Y);
     ofSetVerticalSync(true);
     
     // setup projector window
@@ -89,19 +89,9 @@ void ofApp::update(){
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
-    ofSetWindowTitle(ofToString(ofGetFrameRate()));
-    
-    // draw the gui
-    ofSetColor(255);
-    fboMask.draw(0, 0);
-    ofTranslate(512, 0);
-    grayImage.draw(0, 0);
-    contourFinder.draw();
-    ofTranslate(-512, 0);
+void ofApp::drawProjector(ofEventArgs &args){
 
     // draw projected contours into projector window
-    projector.begin();
     
     ofBackground(0);
     
@@ -127,7 +117,19 @@ void ofApp::draw(){
         ofEndShape();
     }
     
-    projector.end();
+
+}
+
+void ofApp::draw() {
+    ofSetWindowTitle(ofToString(ofGetFrameRate()));
+    
+    // draw the gui
+    ofSetColor(255);
+    fboMask.draw(0, 0);
+    ofTranslate(512, 0);
+    grayImage.draw(0, 0);
+    contourFinder.draw();
+    ofTranslate(-512, 0);
     
     gui.draw();
 }
