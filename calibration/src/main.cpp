@@ -5,11 +5,12 @@
 int main( ){
 	//ofSetupOpenGL(1024,768,OF_WINDOW);			// <-------- setup the GL context
 
-    ofGLWindowSettings settings;
+    ofGLFWWindowSettings settings;
 
     settings.width = 1024;
     settings.height = 768;
     shared_ptr<ofAppBaseWindow> monitorWindow = ofCreateWindow(settings);
+    settings.shareContextWith = monitorWindow;
     shared_ptr<ofAppBaseWindow> projectorWindow = ofCreateWindow(settings);
     projectorWindow->setVerticalSync(false);
 
