@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetWindowShape(1280, 800);
+    //ofSetWindowShape(1280, 800);
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
     
@@ -19,8 +19,9 @@ void ofApp::setup(){
     chessboardY = 4;
 
     fboChessboard.allocate(PROJECTOR_RESOLUTION_X, PROJECTOR_RESOLUTION_Y, GL_RGBA);
+    /*
     secondWindow.setup("chessboard", ofGetScreenWidth(), 0, fboChessboard.getWidth(), fboChessboard.getHeight(), true);
-    
+    */
     searching = false;
 }
 
@@ -121,7 +122,7 @@ void ofApp::update(){
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::drawMonitor(ofEventArgs &args){
     ofClear(0);
     rgbImage.draw(0, 0);
     
@@ -151,10 +152,11 @@ void ofApp::draw(){
         ofDrawBitmapString(ofToString(pairsKinect.size())+" point pairs collected.", 10, ofGetWidth() - 20);
     }
     ofSetColor(255);
-    
-    secondWindow.begin();
+
+}
+
+void ofApp::draw() {
     fboChessboard.draw(0, 0);
-    secondWindow.end();
 }
 
 //--------------------------------------------------------------

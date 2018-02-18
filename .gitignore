@@ -1,0 +1,11 @@
+**/.DS_Store
+*.swp
+obj
+
+
+**/bin/*
+!**/bin/data/.gitkeep
+
+**/*.xcodeproj/*
+!**/*.xcodeproj/project.pbxproj
+!**/*.xcodeproj/xcshareddata

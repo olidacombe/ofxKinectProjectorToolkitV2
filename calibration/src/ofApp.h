@@ -5,12 +5,12 @@
 #include "ofxKinectProjectorToolkitV2.h"
 #include "ofxOpenCv.h"
 #include "ofxCv.h"
-#include "ofxSecondWindow.h"
+//#include "ofxSecondWindow.h"
 
 
 // this must match the display resolution of your projector
-#define PROJECTOR_RESOLUTION_X 1280
-#define PROJECTOR_RESOLUTION_Y 800
+#define PROJECTOR_RESOLUTION_X 1024
+#define PROJECTOR_RESOLUTION_Y 768
 
 
 class ofApp : public ofBaseApp{
@@ -31,12 +31,13 @@ public:
     void gotMessage(ofMessage msg);
 
     void drawChessboard(int x, int y, int chessboardSize);
+    void drawMonitor(ofEventArgs &args);
     void drawTestingPoint(ofVec2f projectedPoint);
     void addPointPair();
     
     ofxKinectProjectorToolkitV2 kpt;
     ofxMultiKinectV2 kinect;
-    ofxSecondWindow secondWindow;
+    //ofxSecondWindow secondWindow;
 
     ofShader depthShader;
     ofTexture colorTex;

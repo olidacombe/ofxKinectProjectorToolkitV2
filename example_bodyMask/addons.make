@@ -1,8 +1,10 @@
 ofxCv
+ofxFastFboReader
 ofxGui
 ofxKinectProjectorToolkitV2
 ofxLayerMask
 ofxMultiKinectV2
 ofxOpenCv
+ofxPoco
 ofxSecondWindow
 ofxTurboJpeg

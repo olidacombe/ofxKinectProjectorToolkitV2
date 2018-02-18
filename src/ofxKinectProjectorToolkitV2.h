@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxXmlPoco.h"
 
 #define STRINGIFY(x) #x
 

@@ -2,5 +2,6 @@ ofxCv
 ofxKinectProjectorToolkitV2
 ofxMultiKinectV2
 ofxOpenCv
+ofxPoco
 ofxSecondWindow
 ofxTurboJpeg
