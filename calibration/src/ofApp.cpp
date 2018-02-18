@@ -156,7 +156,7 @@ void ofApp::drawMonitor(ofEventArgs &args){
 }
 
 void ofApp::draw() {
-    fboChessboard.draw(0, 0);
+    fboChessboard.getTexture().draw(0, 0);
 }
 
 //--------------------------------------------------------------
